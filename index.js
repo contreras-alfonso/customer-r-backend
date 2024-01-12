@@ -10,8 +10,6 @@ app.use(express.json())
 
 dotenv.config()
 
-//conectar db
-
 try {
     await db.authenticate();
     db.sync();
@@ -28,5 +26,5 @@ app.use(cors(corsOptions))
 app.use('/api/customer',customerRoutes);
 
 app.listen(process.env.PORT,()=>{
-    console.log(`Proyecto.. port ${process.env.PORT}`)
+    console.log(`Proyect.. port ${process.env.PORT}`)
 })
